@@ -3,11 +3,18 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "lint:eslint": "eslint ./**/*.{js,jsx,ts,tsx,vue} --cache --fix",
+    "lint:style": "stylelint ./**/*.{css,scss,vue} --cache --fix",
+    "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\" --config ./.prettierrc.json",
+    "lint": "eslint ./",
+    "fix": "eslint ./ --fix",
+    "preinstall": "node ./scripts/preinstall.js",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky install"
   },
   "dependencies": {
     "nuxt": "^3.15.1",
@@ -15,7 +22,33 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@typescript-eslint/parser": "6",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
+    "husky": "^8.0.0",
+    "postcss": "8",
+    "postcss-html": "1",
+    "postcss-scss": "4",
+    "prettier": "^3.4.2",
+    "sass": "^1.83.1",
+    "sass-loader": "^16.0.4",
+    "stylelint": "15",
+    "stylelint-config-prettier": "8",
+    "stylelint-config-recess-order": "4",
+    "stylelint-config-recommended-scss": "9",
+    "stylelint-config-standard": "32",
+    "stylelint-config-standard-scss": "7",
+    "stylelint-config-standard-vue": "1",
+    "stylelint-order": "6",
+    "stylelint-scss": "4",
     "typescript": "^5.7.2",
-    "vue-tsc": "1"
+    "typescript-eslint": "^8.19.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^1.8.27"
   }
 }
