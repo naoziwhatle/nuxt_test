@@ -3,18 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint:eslint": "eslint ./**/*.{js,jsx,ts,tsx,vue} --cache --fix",
     "lint:style": "stylelint ./**/*.{css,scss,vue} --cache --fix",
-    "format": "prettier --write './**/*.{html,vue,ts,js,json,md}' --config ./.prettierrc.json --ignore-path .prettierignore",
-    "lint": "eslint ./",
-    "fix": "eslint ./ --fix",
-    "preinstall": "node ./scripts/preinstall.js",
+    "format": "prettier --write './**/*.{html,vue,ts,js,json,md}' --config ./.prettierrc.json",
+    "lint": "eslint --cache ./**/*.{js,jsx,ts,tsx,vue}",
+    "lint:fix": "eslint --fix ./**/*.{js,jsx,ts,tsx,vue}",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "prepare": "husky install"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "nuxt": "^3.15.1",
