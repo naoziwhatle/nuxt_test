@@ -5,7 +5,7 @@
   "scripts": {
     "lint:eslint": "eslint ./**/*.{js,jsx,ts,tsx,vue} --cache --fix",
     "lint:style": "stylelint ./**/*.{css,scss,vue} --cache --fix",
-    "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\" --config ./.prettierrc.json",
+    "format": "prettier --write './**/*.{html,vue,ts,js,json,md}' --config ./.prettierrc.json --ignore-path .prettierignore",
     "lint": "eslint ./",
     "fix": "eslint ./ --fix",
     "preinstall": "node ./scripts/preinstall.js",
@@ -30,7 +30,6 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
-    "husky": "^8.0.0",
     "postcss": "8",
     "postcss-html": "1",
     "postcss-scss": "4",

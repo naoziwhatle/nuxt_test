@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import eslint from "vite-plugin-eslint";
+import eslint from 'vite-plugin-eslint'
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   typescript: { typeCheck: true },
   // vite 构建工具配置
@@ -24,26 +24,26 @@ export default defineNuxtConfig({
         failOnError: true,
         // 指定排除检查的文件和目录
         exclude: [
-          "**/node_modules/**",
-          "**/dist/**",
-          "**/public/**",
-          "**/.nuxt/**",
-          "**/.output/**",
-          "**/.nitro/**",
-          "**/.data/**",
+          '**/node_modules/**',
+          '**/dist/**',
+          '**/public/**',
+          '**/.nuxt/**',
+          '**/.output/**',
+          '**/.nitro/**',
+          '**/.data/**',
         ],
         // 指定要执行检查的文件和目录
         include: [
-          "./**/*.ts",
-          "./**/*.tsx",
-          "./**/*.js",
-          "./**/*.jsx",
-          "./**/*.vue",
-          "./*.ts",
-          "./*.tsx",
-          "./*.js",
-          "./*.jsx",
-          "./*.vue",
+          './**/*.ts',
+          './**/*.tsx',
+          './**/*.js',
+          './**/*.jsx',
+          './**/*.vue',
+          './*.ts',
+          './*.tsx',
+          './*.js',
+          './*.jsx',
+          './*.vue',
         ],
       }),
     ],
@@ -61,4 +61,4 @@ export default defineNuxtConfig({
       },
     },
   },
-});
+})
